@@ -30,7 +30,7 @@ Objects | Messages
 
  ![diagram](./images/user-stories-diagram2.png)
  
- # Errors
+ ## Errors
  
  ```
 NameError: uninitialized constant DockingStation
