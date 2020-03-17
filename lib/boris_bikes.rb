@@ -4,7 +4,7 @@ class DockingStation
   end
 
   def release_bike
-    
+    Bike.new
   end
 end
 
@@ -14,7 +14,7 @@ class Bike
   end
   
   def working?
-    
+    true
   end
 end
 
