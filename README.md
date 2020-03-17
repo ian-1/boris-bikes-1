@@ -28,7 +28,7 @@ Objects | Messages
 
  Diagram:
 
- ![diagram](./images/user-stories-diagram.jpg)
+ ![diagram](./images/user-stories-diagram2.png)
  
  # Errors
  
