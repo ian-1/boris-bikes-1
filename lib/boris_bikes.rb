@@ -7,3 +7,14 @@ class DockingStation
     
   end
 end
+
+class Bike
+  def initialize
+  
+  end
+  
+  def working?
+    
+  end
+end
+
