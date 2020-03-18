@@ -6,7 +6,7 @@ class DockingStation
   end
 
   def release_bike
-    if @bikes.empty?
+    if empty?
       raise "No bikes available"
     else
       Bike.new
@@ -29,6 +29,14 @@ class DockingStation
 
   def full?
     if @bikes.count >= 20
+      true
+    else
+      false
+    end
+  end
+
+  def empty?
+    if @bikes.count < 1
       true
     else
       false
