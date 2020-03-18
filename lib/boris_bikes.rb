@@ -2,18 +2,23 @@ class DockingStation
   attr_reader :bikes
   def initialize
     @bikes = []
+    # @bikes.push(Bike.new)
   end
 
   def release_bike
-    Bike.new
+    if @bikes.empty?
+      raise "No bikes available"
+    else
+      Bike.new
+    end
   end
 
   def dock_bike(bike)
-    # @bikes.push(bike)
+    @bikes.push(bike)
   end
 
   def check_bike
-    Bike.new
+    @bikes[-1]
   end
 end
 
@@ -26,5 +31,3 @@ class Bike
     true
   end
 end
-
-# test branch working

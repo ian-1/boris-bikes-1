@@ -9,12 +9,14 @@ describe DockingStation do
 
   describe "#release_bike" do
     it "returns a instance of the Bike class" do
+      station.dock_bike(Bike.new)
       expect(station.release_bike).to be_instance_of(Bike)
     end
   end
 
   describe "bike" do
     it "#working? method returns true" do
+      station.dock_bike(Bike.new)
       expect(station.release_bike.working?).to eq true
     end
   end
@@ -28,11 +30,21 @@ describe DockingStation do
   end
 
   it "docking station responds to the #check_bike method" do
-    expect(DockingStation.new).to respond_to(:check_bike)
+    station.dock_bike(Bike.new)
+    expect(station).to respond_to(:check_bike)
   end
 
   it "docking station returns bike object when using the #check_bike method" do
+    station.dock_bike(Bike.new)
     expect(station.check_bike).to be_instance_of(Bike)
+  end
+
+  it "docking station won't release bikes when empty" do
+    expect{ DockingStation.new.release_bike }.to raise_error("No bikes available")
+  end
+
+  it "check that bikes contains 1 Bike instance we have run #dock_bike" do
+    expect( DockingStation.new.dock_bike(Bike.new)[-1]).to be_instance_of(Bike)
   end
 
 end
