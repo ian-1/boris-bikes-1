@@ -19,9 +19,9 @@ describe DockingStation do
     end
   end
 
-  it "it responds to the #dock_bike method with 1 argument" do
-      expect(DockingStation.new).to respond_to(:dock_bike).with(1).argument
-  end
+  # it "it responds to the #dock_bike method with 1 argument" do
+  #    expect(DockingStation.new).to respond_to(:dock_bike).with(1).argument
+  # end
 
 end
 
@@ -29,8 +29,8 @@ describe Bike do
 
   subject(:bike) { described_class.new }
 
-  it "Users bike is docked using the #dock_bike function" do
-    expect(DockingStation.new.dock_bike(bike)).to have_attributes(:docked_bike => bike)
-  end
+  # it "Users bike is docked using the #dock_bike function" do
+  #  expect(DockingStation.new.dock_bike(bike)).to have_attributes(:docked_bike => bike)
+  # end
   
 end
