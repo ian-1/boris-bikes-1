@@ -48,7 +48,10 @@ describe DockingStation do
   end
 
   it "docking station won't accept more than 20 bikes" do
-    20.times { station.dock_bike(Bike.new) }
+    # default capacity should automically copy data from boris_bikes.rb
+    # currently this is insufficient code
+    DEFAULT_CAPACITY = 20
+    DEFAULT_CAPACITY.times { station.dock_bike(Bike.new) }
     expect{ station.dock_bike(Bike.new) }.to raise_error("Docking station full")
   end
 end
