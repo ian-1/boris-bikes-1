@@ -14,7 +14,7 @@ class DockingStation
   end
 
   def dock_bike(bike)
-    if @bikes.count < 1
+    if @bikes.count < 20
       @bikes.push(bike)
     else
       raise "Docking station full"

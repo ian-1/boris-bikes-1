@@ -47,8 +47,8 @@ describe DockingStation do
     expect( DockingStation.new.dock_bike(Bike.new)[-1]).to be_instance_of(Bike)
   end
 
-  it "docking station won't accept more than 1 bike" do
-    station.dock_bike(Bike.new)
+  it "docking station won't accept more than 20 bikes" do
+    20.times { station.dock_bike(Bike.new) }
     expect{ station.dock_bike(Bike.new) }.to raise_error("Docking station full")
   end
 end
